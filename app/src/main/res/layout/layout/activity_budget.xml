@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F7"
+    android:padding="24dp">
+
+    <!-- Header Section with Budget Display -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/budgetCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Budget"
+                android:textColor="#7B7B7B"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/currentBudgetText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Rs.0.00"
+                android:textColor="#212121"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/budgetProgressBar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="24dp"
+                android:progress="0"
+                android:progressTint="#7B1FA2"
+                android:background="#E0E0E0" />
+
+            <TextView
+                android:id="@+id/remainingBudgetInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                android:text="Budget Remaining: 100%"
+                android:textColor="#7B7B7B"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Beautiful Decorative Element -->
+    <View
+        android:id="@+id/decorativeDivider"
+        android:layout_width="80dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="32dp"
+        android:background="#7B1FA2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/budgetCardView" />
+
+    <TextView
+        android:id="@+id/updateBudgetTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Update Your Budget"
+        android:textColor="#212121"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/decorativeDivider" />
+
+    <!-- Budget Input Section with Beautiful Styling -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/budgetInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Enter new budget amount"
+        app:boxStrokeColor="#7B1FA2"
+        app:hintTextColor="#7B1FA2"
+        app:layout_constraintTop_toBottomOf="@id/updateBudgetTitle"
+
+        app:startIconTint="#7B1FA2"
+        app:prefixText="$">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editBudget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textColor="#212121"
+            android:textCursorDrawable="@null" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Purple Button with Gradient Effect -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSetBudget"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:text="Update Budget"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:backgroundTint="#7B1FA2"
+        app:cornerRadius="12dp"
+        app:layout_constraintTop_toBottomOf="@id/budgetInputLayout" />
+
+    <!-- Beautiful Bottom Image/Illustration -->
+    <ImageView
+        android:id="@+id/budgetIllustration"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:alpha="0.9"
+        android:contentDescription="Budget illustration"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSetBudget" />
+
+    <!-- Budget Tips Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/btnSetBudget">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Budget Tip"
+                android:textColor="#7B1FA2"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/budgetTip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Try the 50/30/20 rule: 50% on needs, 30% on wants, and 20% on savings."
+                android:textColor="#5A5A5A"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

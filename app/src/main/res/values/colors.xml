@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary_green">#2E7D32</color> <!-- Green 800 -->
+    <color name="primary_green_dark">#1B5E20</color> <!-- Green 900 -->
+    <color name="primary_green_light">#A5D6A7</color> <!-- Light Green -->
+
+    <!-- Secondary colors -->
+    <color name="secondary_blue">#1565C0</color> <!-- Blue 800 -->
+    <color name="secondary_blue_light">#90CAF9</color>
+
+    <!-- Neutral UI colors -->
+    <color name="background_light">#FAFAFA</color>
+    <color name="background_dark">#121212</color>
+    <color name="card_background">#FFFFFF</color>
+
+    <!-- Text Colors -->
+    <color name="text_dark">#212121</color>
+    <color name="text_light">#FFFFFF</color>
+    <color name="text_hint">#9E9E9E</color>
+
+    <!-- Accent Colors -->
+    <color name="accent_gold">#FFD600</color>
+    <color name="error_red">#D32F2F</color>
+
+    <!-- Common colors -->
+
+
+    <color name="purple">#40407a</color>
+
+    <color name="ble">#022DE9</color>
+
+    <color name="gg">#E8E8ED</color>
+
+    <color name="gh">#a29bfe</color>
+
+
+    <color name="nav_item_selected_color">#6200EE</color> <!-- Purple color for selected item -->
+    <color name="nav_item_unselected_color">#B0B0B0</color> <!-- Light gray color for unselected items -->
+
+
+</resources>
